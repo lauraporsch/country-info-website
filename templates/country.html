@@ -1,0 +1,49 @@
+{% include "header.html" %}
+
+<h1> {{country_data[0]["name"]["common"]}}</h1>
+
+<table>
+    <tr>
+        <td>Official Name</td>
+        <td>{{country_data[0]["name"]["official"]}}</td>
+    </tr>
+     <tr>
+        <td>Currency</td>
+        <td>{{currency[0]}} {{currency[1]}} {{currency[2]}}</td>
+    </tr>
+     <tr>
+        <td>Capital</td>
+        <td>{{country_data[0]["capital"][0]}}</td>
+    </tr>
+    <tr>
+        <td>Continent</td>
+        <td>{{country_data[0]["continents"][0]}}</td>
+    </tr>
+    <tr>
+        <td>Region</td>
+        <td>{{country_data[0]["subregion"]}}</td>
+    </tr>
+    <tr>
+        <td>Languages</td>
+        <td>{{country_data[0]["languages"]}}</td>
+    </tr>
+    <tr>
+        <td>Coordinates</td>
+        <td>{{country_data[0]["latlng"]}}</td>
+    </tr>
+    <tr>
+        <td>Landlocked</td>
+        <td>{{country_data[0]["landlocked"]}}</td>
+    </tr>
+    <tr>
+        <td>Maps</td>
+        <td>{{country_data[0]["maps"]["googleMaps"]}}</td>
+    </tr>
+    <tr>
+        <td>Population</td>
+        <td>{{country_data[0]["population"]}}</td>
+    </tr>
+</table>
+
+
+{% include "footer.html" %}
