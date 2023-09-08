@@ -16,86 +16,43 @@ footer{
 }
 
 h1 {
-    margin: 0 200px;
+    margin: 40px 0px;
 }
 
-h2 {
-    margin: 50px 0;
+td {
+    padding: 5px 20px;
+    text-align: left;
 }
 
-h3 {
-    margin: 20px 0;
+.center {
+    margin-left: auto;
+    margin-right: auto;
 }
 
-h5 {
-    background-color: white;
-    font-size: 0.75rem;
-}
-
-img {
-    margin: 10px 0;
-}
-
-input {
-    background-color: rgb(210, 233, 233);
-    border-width: 1px;
-    margin: 40px 20px;
-}
-
-.btn {
-    background-color: rgb(210, 233, 233);
-    border-color: rgb(210, 233, 233);
-    color: black;
-}
-
-.btn:hover {
-    background-color: rgb(196, 223, 223);
-    border-color: rgb(196, 223, 223);
-}
-
-.card {
-    margin: 10px 10px;
-}
-
-.card-body {
-    padding: 60px 0;
-}
-
-.card-title {
-    margin: 0 60px;
-}
-
-
-.colors {
-    margin: 20px 0;
+.copyright {
+    color: #E6E2C3;
+    font-size: 0.7rem;
 }
 
 .fa-circle {
     color: #E6E2C3;
 }
 
-.flashes {
-    color: red;
-}
-
 .icon-text{
     font-size: 0.5rem;
+    margin-top: 50px;
 }
 
-.image{
-    height: 50vh;
+.icon-text a{
+    color: #E6E2C3;
 }
 
 .logo{
-    margin: 10px 0;
+    margin: 0 20px;
     width: 5%;
 }
 
 .navbar{
     background: #227C70;
     padding: 0 16px;
-}
-
-.upload-btn {
-    padding: 5px 10px;
 }
