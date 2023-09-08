@@ -27,6 +27,15 @@ def transform_currency_data(country_data):
     return currency
 
 
+def transform_language_data(country_data):
+    languages = []
+    languages_complete = country_data[0]["languages"]
+    for item in languages_complete:
+        language = languages_complete[item]
+        languages.append(language)
+    return languages
+
+
 # ---------------------------- SET UP ROUTES ------------------------------- #
 @app.route('/', methods=['GET', 'POST'])
 def choose_country():
@@ -44,7 +53,8 @@ def choose_country():
         chosen_country = request.form.get('chosen_country')
         country_data = get_country_into(chosen_country)
         currency = transform_currency_data(country_data)
-        return render_template('country.html', country_data=country_data, currency=currency)
+        languages = transform_language_data(country_data)
+        return render_template('country.html', country_data=country_data, currency=currency, languages=languages)
 
 
 if __name__ == "__main__":

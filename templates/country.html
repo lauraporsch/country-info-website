@@ -9,7 +9,7 @@
     </tr>
      <tr>
         <td>Currency</td>
-        <td>{{currency[0]}} {{currency[1]}} {{currency[2]}}</td>
+        <td>{{currency[1]}} ({{currency[0]}}), symbol: {{currency[2]}}</td>
     </tr>
      <tr>
         <td>Capital</td>
@@ -25,23 +25,31 @@
     </tr>
     <tr>
         <td>Languages</td>
-        <td>{{country_data[0]["languages"]}}</td>
-    </tr>
-    <tr>
-        <td>Coordinates</td>
-        <td>{{country_data[0]["latlng"]}}</td>
+        <td> {% for language in languages: %}
+                {% if languages.index(language) < languages |length -1: %}
+                    {{language}},
+                {% else: %}
+                    {{language}}
+                {% endif %}
+            {% endfor %}
+        </td>
     </tr>
     <tr>
         <td>Landlocked</td>
-        <td>{{country_data[0]["landlocked"]}}</td>
-    </tr>
-    <tr>
-        <td>Maps</td>
-        <td>{{country_data[0]["maps"]["googleMaps"]}}</td>
+        <td> {% if country_data[0]["landlocked"]: %}
+                Yes
+            {% else: %}
+                No
+            {% endif %}
+        </td>
     </tr>
     <tr>
         <td>Population</td>
-        <td>{{country_data[0]["population"]}}</td>
+        <td>{{"{:,}".format(country_data[0]["population"])}}</td>
+    </tr>
+    <tr>
+        <td>Maps</td>
+        <td> <a href={{country_data[0]["maps"]["googleMaps"]}} title="Link Google Maps" target="_blank"> Google Maps</a> </td>
     </tr>
 </table>
 
