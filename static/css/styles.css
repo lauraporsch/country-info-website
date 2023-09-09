@@ -43,7 +43,7 @@ td {
     margin: 20px 0;
 }
 
-.btn:hover {
+.btn:hover, btn:active {
     background-color: #88A47C;
     border-color: #88A47C;
 }
