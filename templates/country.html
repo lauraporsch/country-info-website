@@ -1,6 +1,7 @@
 {% include "header.html" %}
 
-<h1> {{country_data[0]["name"]["common"]}}</h1>
+<h1> {{country_data[0]["name"]["common"]}}  <img class="flag" src={{country_data[0]["flags"]["png"]}} alt=" "> </h1>
+
 
 <table class="center">
     <tr>
@@ -53,5 +54,7 @@
     </tr>
 </table>
 
+
+<a class="btn btn-primary center" href="{{ url_for('choose_country') }}">Back</a>
 
 {% include "footer.html" %}

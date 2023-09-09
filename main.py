@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_bootstrap import Bootstrap
 import requests
+
 # ---------------------------- START FLASK FRAMEWORK ------------------------------- #
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "sjhfuwry97yw39rhjqkef"
@@ -44,11 +45,12 @@ def choose_country():
         response = requests.get(url=restcountries_endpoint)
         response.raise_for_status()
         country_data = response.json()
-        countries = []
+        countries_names = []
         for index in range(len(country_data)):
             country = country_data[index]["name"]["common"]
-            countries.append(country)
-        return render_template('index.html', countries=countries)
+            countries_names.append(country)
+        countries = sorted(countries_names)
+        return render_template('index.html', countries=countries, )
     if request.method == "POST":
         chosen_country = request.form.get('chosen_country')
         country_data = get_country_into(chosen_country)

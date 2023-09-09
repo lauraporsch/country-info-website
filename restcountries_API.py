@@ -1,6 +1,6 @@
 import requests
 
-COUNTRY = "Germany"
+COUNTRY = "Belgium"
 
 restcountries_endpoint = f"https://restcountries.com/v3.1/name/{COUNTRY}"
 
@@ -8,18 +8,20 @@ restcountries_endpoint = f"https://restcountries.com/v3.1/name/{COUNTRY}"
 response = requests.get(url=restcountries_endpoint)
 response.raise_for_status()
 country_data = response.json()
+flag = country_data[0]["flags"]["png"]
+print(flag)
 
-common_name = country_data[0]["name"]["common"]
-print(common_name)
-official_name = country_data[0]["name"]["official"]
-print(official_name)
-currency_complete = (country_data[0]["currencies"])
-for currency in currency_complete:
-    print(currency)
-    currency_name = currency_complete[currency]["name"]
-    print(currency_name)
-    currency_symbol = currency_complete[currency]["symbol"]
-    print(currency_symbol)
+# common_name = country_data[0]["name"]["common"]
+# print(common_name)
+# official_name = country_data[0]["name"]["official"]
+# print(official_name)
+# currency_complete = (country_data[0]["currencies"])
+# for currency in currency_complete:
+#     print(currency)
+#     currency_name = currency_complete[currency]["name"]
+#     print(currency_name)
+#     currency_symbol = currency_complete[currency]["symbol"]
+#     print(currency_symbol)
 # capital = country_data[0]["capital"][0]
 # print(capital)
 # continent = country_data[0]["continents"][0]
