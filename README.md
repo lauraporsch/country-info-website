@@ -11,4 +11,3 @@ Example Country-Info
 ![image](https://github.com/lauraporsch/country-info-website/assets/127047376/7a5d6176-9a3b-47ed-9a01-2259b69b13b5)
 
 ![image](https://github.com/lauraporsch/country-info-website/assets/127047376/87305302-8742-47c2-8366-4afd19a4d47d)
-
