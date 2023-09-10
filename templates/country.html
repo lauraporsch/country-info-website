@@ -48,12 +48,12 @@
         <td>Population:</td>
         <td>{{"{:,}".format(country_data[0]["population"])}}</td>
     </tr>
-    <tr>
-        <td>Maps:</td>
-        <td> <a href={{country_data[0]["maps"]["googleMaps"]}} title="Link Google Maps" target="_blank"> Google Maps</a> </td>
-    </tr>
 </table>
 
+<iframe class="map center"
+  referrerpolicy="no-referrer-when-downgrade"
+  src={{map_link}}>
+</iframe>
 
 <a class="btn btn-primary center" href="{{ url_for('choose_country') }}">Back</a>
 

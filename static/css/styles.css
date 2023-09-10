@@ -40,7 +40,7 @@ td {
 .btn {
     background-color: #227C70;
     border-color: #227C70;
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
 .btn:hover, btn:active {
@@ -86,6 +86,13 @@ td {
 .logo{
     margin: 0 20px;
     width: 5%;
+}
+
+.map {
+    border: 0;
+    height: 250px;
+    margin-top: 20px;
+    width: 450px;
 }
 
 .navbar{
